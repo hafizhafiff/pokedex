@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+body {
+    margin: 0;
+    background-image: url(pokemonnn.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Dongle';
+    transition:  250ms ease-in-out;
+    overflow-x: hidden;
+}
+nav {
+display: flex;
+background-image: url(pokemonnn.png);
+position: fixed;
+width: 100%;
+z-index: 2;
+top: 0;
+transition:  250ms ease-in-out;
+}
+nav .logo {
+    margin-top: 20px;
+    margin-left: 100px;
+    width: 200px;
+}
+nav ul {
+display: flex;
+list-style: none;
+width: 40%;
+justify-content: flex-end;
+margin-top: 40px;
+font-size: 30px;
+flex: 1;
+margin-right: 40px;
+gap: 60px;
+}
+nav ul li a {
+text-decoration: none;
+color: black;
+font-weight: 700; 
+ }
+ nav ul li a:hover {
+     font-weight: 1000;
+     text-decoration: underline;
+     color: white;
+ }
+ .menu-toggle {
+     flex-direction: column;
+     height: 20px;
+     justify-content: space-between;
+     display: none;
+     position: relative;
+ }
+ .menu-toggle input {
+     position: absolute;
+     width: 40px;
+     height: 28px;
+     opacity: 0;
+     left: -9.7px;
+     top: -8px;
+     cursor: pointer;
+     z-index: 2;
+ }
+ .menu-toggle span {
+     display: block;
+     width: 28px;
+     height: 3.9px;
+     background-color: black;
+     border-radius: 3px;
+     transition: all 0.5s;
+ }
+ .menu-toggle span:nth-child(2) {
+     transform-origin: 0 0;
+
+ }
+ .menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+
+}
+ .menu-toggle input:checked ~ span:nth-child(2) {
+     transform: rotate(45deg) translate(-1px, -1px);
+ }
+ .menu-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+}
+ .menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+.container-besar {
+    margin: 5px auto;
+    width: 1200px;
+    align-items: center;
+}
+.bigbox {
+    border-radius: 20px;
+    border: 3.5px solid black;
+    font-family: 'Dongle';
+    font-size: 30px;
+    margin-top: 113.7px;
+}
+.bigbox-header {
+align-items: center;
+margin: 30px auto;
+width: 300px;
+}
+.navigat {
+    display: flex;
+}
+.bigbox .navigat .theme {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: 'Dongle';
+    font-size: 20px;
+    border-radius: 9px;
+    border: 2px solid black;
+    background-color: black;
+    color: whitesmoke;
+
+}
+.bigbox .navigat .search-button {
+    font-family: 'Dongle';
+    font-size: 20px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1080px;
+    border-radius: 7px;
+    border: 0px solid;
+    background-color: black;
+    color: white;
+
+}
+.bigbox .navigat .input-keyword {
+    font-family: 'Dongle';
+    font-size: 20px;
+    outline: none;
+    font-weight: 600;
+    border: 0;
+    margin-top: 20px;
+    margin-left: 920px;
+    position: absolute;
+    border-radius: 7px;
+}
+.header {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    font-size: 26px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+div .bigbox-header img {
+    top: 220px;
+    left: 875px;
+    z-index: +1;
+    position: absolute;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+    flex-wrap: wrap;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+.charcard {
+    background-color: whitesmoke;
+    margin: 20px auto;
+    width: 150px;
+    height: 168px;
+    color: black;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px 0 grey;
+    justify-content: space-evenly;
+    transition: 250ms ease-in-out;
+}
+.charcard:hover {
+    box-shadow: 0 4px 4px 0 yellow;
+    margin-top: -10px;
+}
+.charcard .cardheader {
+    background-color: whitesmoke;
+    margin-top: 0;
+}
+.charcard .cardheader img {
+    position:absolute;
+    margin-top: -60px;
+    margin-left: 19px;
+}
+.charcard .charcontent {
+    background-color: whitesmoke;
+    margin-top: 80px;
+    font-weight: 900;
+    text-align: center;
+    font-size: 28px;
+    transition: 250ms ease-in-out;
+}
+.charcard .charnumber {
+    text-align: center;
+    color: #BBBBBB;
+    margin-top: 1px;
+}
+.loadmore button {
+    color: white;
+    margin-top: 2px;
+    background-color: black;
+    border-radius: 7px;
+    font-family: 'Dongle';
+    font-size: 20px;
+    margin-left: 560px;
+    margin-bottom: 20px;
+    border: 2px black;
+}
+.bigbox .nopoke {
+    font-family: 'Dongle';
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 90px;
+}
+
+/*for iPhone X*/
+@media (max-width: 376px) {
+    nav {
+        width: 100%;
+        position: fixed;
+        margin-bottom: 0;
+    }
+    body {
+        background-size: 100% 100%;
+        margin: 0;
+    }
+    .menu-toggle {
+        display: flex;
+        margin-top: 25px;
+        margin-left: 100px;
+        flex: 1;
+    }
+    nav ul {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-image: url(pokemonnn.png);
+        align-items: center;
+        margin-top: 20px;
+        margin-right: 0;
+        border-radius: 20px;
+        padding-left: 0;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+    nav .logo {
+        margin-left: 10px;
+    }
+    nav .logo img {
+        width: 115px;
+    }
+    .charcard {
+        max-width: 100px;
+        max-height: 110px;
+    }
+    .content {
+        margin-left: 7px;
+        margin-right: 7px;
+        justify-content: space-between;
+    }
+    .bigbox .navigat .theme {
+        font-size: 15px;
+    }
+    .bigbox .navigat .input-keyword {
+        margin-left: 150px;
+        font-size: 15px;
+    }
+    .bigbox .navigat .search-button {
+        margin-left: 275px;
+        font-size: 15px;
+    }
+    .header {
+        width: 220px;
+        font-size: 20px;
+        border-radius: 20px;
+        margin-left: 35px;
+    }
+    .charcard .charcontent {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .charcard .cardheader img {
+        max-width: 90px;
+        max-height: 98px;
+        position: absolute;
+        margin-top: -45px;
+        margin-left: 6px;
+    }
+    .charcard .charnumber {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    .container-besar {
+        max-width: 350px;
+    }
+    div .bigbox-header img {
+        top: 180px;
+        left: 260px;
+        max-width: 50px;
+        max-height: 50px;
+    }
+    .bigbox {
+        max-width: 400px;
+        margin-top: 80px;
+        align-items: center;
+    }
+    .loadmore button {
+        margin-left: 140px;
+        margin-bottom: 20px;
+    }
+}
+/*for iPad Pro*/
+@media (min-width: 800px) and (max-width: 1026px) {
+    nav {
+        width: 100%;
+        position: fixed;
+        margin-bottom: 0;
+    }
+    body {
+        background-size: 100% 100%;
+    }
+    nav ul {
+        display: flex;
+        flex: 1;
+        font-size: 40px;
+    }
+    nav .logo {
+        margin-left: 10px;
+    }
+    nav .logo img {
+        width: 250px;
+    }
+    .charcard {
+        width: 150px;
+        height: 160px;
+        border-radius: 30px;
+    }
+    .content {
+        margin-left: 7px;
+        margin-right: 7px;
+        justify-content: space-between;
+    }
+    .bigbox .navigat .theme {
+        font-size: 21px;
+    }
+    .bigbox .navigat .input-keyword {
+        margin-left: 400px;
+        font-size: 25px;
+    }
+    .bigbox .navigat .search-button {
+        margin-left: 604px;
+        font-size: 25px;
+    }
+    .header {
+        width: 300px;
+        font-size: 30px;
+        border-radius: 20px;
+        margin-left: 1px;
+        margin-top: 100px;
+    }
+    .charcard .charcontent {
+        font-size: 35px;
+        margin-top: 60px;
+    }
+    .charcard .cardheader img {
+        width: 140px;
+        height: 148px;
+        position: absolute;
+        margin-top: -70px;
+        margin-left: 10px;
+    }
+    .charcard .charnumber {
+        font-size: 40px;
+    }
+    .container-besar {
+        max-width: 750px;
+    }
+    div .bigbox-header img {
+        top: 310px;
+        left: 627px;
+        width: 80px;
+        height: 80px;
+    }
+    .bigbox {
+        max-width: 1000px;
+        margin-top: 141px;
+        align-items: center;
+    }
+    .loadmore button {
+        margin-left: 335px;
+        margin-bottom: 20px;
+    }
+}
+/*for iPad*/
+@media (min-width: 767px) and (max-width: 790px) {
+    nav {
+        width: 100%;
+        position: fixed;
+        margin-bottom: 0;
+    }
+    body {
+        background-size: 100% 100%;
+    }
+    nav ul {
+        display: flex;
+        flex: 1;
+        font-size: 40px;
+    }
+    nav .logo {
+        margin-left: 10px;
+    }
+    nav .logo img {
+        width: 250px;
+    }
+    .charcard {
+        width: 150px;
+        height: 160px;
+        border-radius: 30px;
+    }
+    .content {
+        margin-left: 7px;
+        margin-right: 7px;
+        justify-content: space-between;
+    }
+    .bigbox .navigat .theme {
+        font-size: 21px;
+    }
+    .bigbox .navigat .input-keyword {
+        margin-left: 400px;
+        font-size: 25px;
+    }
+    .bigbox .navigat .search-button {
+        margin-left: 604px;
+        font-size: 25px;
+    }
+    .header {
+        width: 300px;
+        font-size: 30px;
+        border-radius: 20px;
+        margin-left: 1px;
+        margin-top: 100px;
+    }
+    .charcard .charcontent {
+        font-size: 35px;
+        margin-top: 60px;
+    }
+    .charcard .cardheader img {
+        width: 140px;
+        height: 148px;
+        position: absolute;
+        margin-top: -70px;
+        margin-left: 10px;
+    }
+    .charcard .charnumber {
+        font-size: 40px;
+    }
+    .container-besar {
+        max-width: 680px;
+    }
+    div .bigbox-header img {
+        top: 315px;
+        left: 500px;
+        width: 80px;
+        height: 80px;
+    }
+    .bigbox {
+        max-width: 1000px;
+        margin-top: 141px;
+        align-items: center;
+    }
+    .loadmore button {
+        margin-left: 315px;
+        margin-bottom: 20px;
+    }
+}
+/*for iPhone 6/7/8 Plus*/
+@media (min-width: 377px) and (max-width: 415px) {
+    nav {
+        width: 100%;
+        position: fixed;
+        margin-bottom: 0;
+    }
+    body {
+        background-size: 100% 100%;
+    }
+    .menu-toggle {
+        display: flex;
+        margin-top: 25px;
+        margin-left: 150px;
+        flex: 1;
+    }
+    nav ul {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-image: url(pokemonnn.png);
+        align-items: center;
+        margin-top: 20px;
+        margin-right: 0;
+        border-radius: 20px;
+        padding-left: 0;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+    nav ul.slide {
+        transform: translateX(0%);
+    }
+    nav .logo {
+        margin-left: 10px;
+    }
+    nav .logo img {
+        width: 115px;
+    }
+    .charcard {
+        max-width: 100px;
+        max-height: 110px;
+    }
+    .content {
+        margin-left: 7px;
+        margin-right: 7px;
+        justify-content: space-between;
+    }
+    .bigbox .navigat .theme {
+        font-size: 15px;
+    }
+    .bigbox .navigat .input-keyword {
+        margin-left: 150px;
+        font-size: 15px;
+    }
+    .bigbox .navigat .search-button {
+        margin-left: 275px;
+        font-size: 15px;
+    }
+    .header {
+        width: 220px;
+        font-size: 20px;
+        border-radius: 20px;
+        margin-left: 35px;
+    }
+    .charcard .charcontent {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .charcard .cardheader img {
+        max-width: 90px;
+        max-height: 98px;
+        position: absolute;
+        margin-top: -45px;
+        margin-left: 6px;
+    }
+    .charcard .charnumber {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    .container-besar {
+        max-width: 350px;
+    }
+    div .bigbox-header img {
+        top: 170px;
+        left: 285px;
+        max-width: 50px;
+        max-height: 50px;
+    }
+    .bigbox {
+        max-width: 400px;
+        margin-top: 72.5px;
+        align-items: center;
+    }
+    .loadmore button {
+        margin-left: 140px;
+        margin-bottom: 20px;
+    }
+}
+/*for iPhone 6/7/8 */
+@media (max-width: 376px) {
+
+}
+
